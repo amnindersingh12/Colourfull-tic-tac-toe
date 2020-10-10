@@ -36,7 +36,8 @@ function setup() {
 
 function initLabels() {
   newGameBtn = createButton('New Game');
-  newGameBtn.position(200, width + 100);
+  // newGameBtn.position(200, width + 100,'inherit');
+  newGameBtn.position(0,  10, 'relative');
    newGameBtn.style('font-size', '30px');
   newGameBtn.style('background-color', '#fae');
   newGameBtn.mousePressed(newGame);
@@ -46,10 +47,14 @@ function initLabels() {
   currentPlayer = 1
   
   turnP = createP(players[currentPlayer] + "'s Turn").style('background-color', '#FFF').style('font-size', '20px').style('padding', '5px')
-  turnP.position(200, width+120);
+  // turnP.position(200, width+120,'inherit');
+    turnP.position(0, 50, 'relative');
+
   
   winnerP = createP('Currently No Winner').style('background-color', '#FFF').style('font-size', '20px').style('padding', '5px')
-  winnerP.position(550, width+75);
+  // winnerP.position(550, width+75,'inherit');
+  winnerP.position(0, 100, 'relative');
+
 }
 
 function newGame() {
